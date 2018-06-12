@@ -1,6 +1,6 @@
 package A13_MergeSort;
 
-public class Person {
+public class Person implements Comparable<Person> {
 	
 	private final String nachname;
 	
@@ -24,6 +24,18 @@ public class Person {
 	 * @return <0, wenn a<b || =0, wenn a=b || >0, wenn a>b
 	 */
 	public int compareTo(Person p) {
-		return 0;
+		/**
+		 * Vergleiche Nachnamen.
+		 */
+		int compare = this.getNachname().compareTo(p.getNachname()); 
+		
+		/**
+		 * Vergleiche Vornamen, wenn Nachnamen gleich sind.
+		 */
+		if (compare == 0) {
+			return this.getVorname().compareTo(p.getVorname());
+		}
+		
+		return compare;
 	}
 }
