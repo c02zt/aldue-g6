@@ -20,10 +20,19 @@ public abstract class FindWay {
 	 * @return Weg von Start nach Ziel oder null
 	 */
 	public List<Integer> findWay(int from, int to) {
+		/**
+		 * Initialisierung der Entfernungstabelle.
+		 */
 		initPathSearch();
+		/**
+		 * Falls kein Weg gefunden wurde, geben wir null aus.
+		 */
 		if (!calculatePath(from, to)) {
 			return null;
 		}
+		/**
+		 * Sonst kann ein Weg erstellt werden.
+		 */
 		return createWay(from, to);
 	}
 
