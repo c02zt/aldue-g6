@@ -19,7 +19,7 @@ Im Package finden Sie auch passende JUnit-Tests. Diese leiten sich von der Klass
 
 Die Implementierung eines *Merge-Sort-Algorithmus* besteht aus zwei Teilen. Wie bereits aus dem Namen ersichtlich ist, handelt es sich bei diesen zwei Teilen um die *Merge*- und die *Sort*-Methode.
 
-In diesem Fall wird ein Feld, der Objekte zur Darstellung einer Person enthält. Die Objekte vom Typ `Person` werden nach dem Vor- und Nachnamen sortiert.
+In diesem Fall wird ein Feld sortiert, welches Objekte zur Darstellung einer Person enthält. Die Objekte vom Typ `Person` werden nach dem Vor- und Nachnamen sortiert.
 
 ### Sort
 
@@ -124,7 +124,7 @@ Die Laufzeit der Methode `merge` beträgt *O(n)*.  Wobei *n* die Länge des sort
 
 #### Beispiel
 
-Wie das Zusammenfügen funktioniert wird für den letzten Schritt des vorigen Beispiels gezeigt. Es wird ersichtlich, dass das Zusammenfügen eine lineare Laufzeit, die proportional der Länge des Sortierten Abschnittes ist. Das heißt sieben Schritte für sieben Elemente.
+Wie das Zusammenfügen funktioniert wird im letzten Schritt des vorigen Beispiels gezeigt. Es wird ersichtlich, dass das Zusammenfügen eine lineare Laufzeit hat, welche proportional der Länge des sortierten Abschnittes ist. Das heißt: sieben Schritte für sieben Elemente.
 
 ###### Anfang
 ```
