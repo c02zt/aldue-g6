@@ -104,8 +104,8 @@ protected boolean calculatePath(int from, int to) {
 
 Die Laufzeit dieser Implementierung des Algorithmus von Dijkstra ist *O((E + V) log V)*.
 
-Die Priority-Queue wird in *O(V log V)* aufgefüllt, da jeder Knoten eingefügt werden muss, was im schlimmsten Fall eine Laufzeit von *O(log V)* hat.
+Die Priority-Queue wird in *O(V log V)* aufgefüllt, da jeder Knoten eingefügt werden muss, was im schlimmsten Fall eine Laufzeit von *O(log V)* ergibt.
 
-Anschließend wird jeder Knoten in *O(1)* aus der Priority-Queue rausgenommen und dann Werden alle Kanten aus diesem Knoten genommen, um zu seinen Nachbaren zu kommen. Im schlimmsten Fall werden insgesamt alle Kanten im Graph genommen. Wenn ein Nachbar erreicht wird, wird im schlimmsten Fall immer seine Priorität im Priority-Queue verringert. Dies erfolgt mit einer Laufzeit von *O(log V)*. Das bedeutet, dassnachdem alle Knoten aus dem Priority-Queue entfernt wurden, eine Laufzeit von *O(E log V)* erreicht wird.
+Anschließend wird jeder Knoten in *O(1)* aus der Priority-Queue rausgenommen und dann werden alle Kanten aus diesem Knoten genommen, um zu seinen Nachbaren zu gelangen. Im schlimmsten Fall werden insgesamt alle Kanten im Graph verwendet. Wenn ein Nachbar erreicht wird, wird im schlimmsten Fall immer seine Priorität im Priority-Queue verringert. Dies erfolgt mit einer Laufzeit von *O(log V)*. Das bedeutet, dass nachdem alle Knoten aus dem Priority-Queue entfernt wurden, eine Laufzeit von *O(E log V)* erreicht wird.
 
-Somit berechnet sich in der Summe eine Laufzeit von *O((E + V) log)* für das Auffüllen der Priority-Queue und die Änderungen der Prioritäten der Knoten.
+Somit berechnet sich in Summe eine Laufzeit von *O((E + V) log)* für das Auffüllen der Priority-Queue und die Änderungen der Prioritäten der Knoten.
