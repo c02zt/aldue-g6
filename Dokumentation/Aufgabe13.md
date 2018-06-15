@@ -17,15 +17,15 @@ Im Package finden Sie auch passende JUnit-Tests. Diese leiten sich von der Klass
 
 ## Lösung
 
-Die Implementierung eines *Merge-Sort-Algorithmus* besteht aus zwei Teilen. Wie es schon aus dem Namen ersichtlich ist, sind diese zwei Teile die *Merge*- und die *Sort*-Methode.
+Die Implementierung eines *Merge-Sort-Algorithmus* besteht aus zwei Teilen. Wie bereits aus dem Namen ersichtlich ist, handelt es sich bei diesen zwei Teilen um die *Merge*- und die *Sort*-Methode.
 
-In diesem Fall wird ein Feld, der Objekte zur Darstellung einer Person enthält. Die Objekte vom typ `Person` werden nach dem Nach- und Vornamen sortiert.
+In diesem Fall wird ein Feld, der Objekte zur Darstellung einer Person enthält. Die Objekte vom Typ `Person` werden nach dem Vor- und Nachnamen sortiert.
 
 ### Sort
 
-Die Sort-Methode wurde mithilfe zweier gleichnamigen Methoden `sort` implementiert. Die erste dient nur als ein erster Aufruf der zweiten rekursiven Methode, um den richtigen Anfangs- und Endpunkt zu bestimmen. Somit ist der Algorithmus einfach aufrufbar auf einem beliebigem Feld.
+Die Sort-Methode wurde mithilfe zweier gleichnamigen Methoden `sort` implementiert. Die Erste dient lediglich als ein erster Aufruf der zweiten rekursiven Methode, um den richtigen Anfangs- und Endpunkt zu bestimmen. Somit ist der Algorithmus auf einem beliebigem Feld einfach aufrufbar .
 
-Die rekursive Methode ist zuständig für die Halbierung des Feldes, solange dass unser ursprüngliche Feld in kleine Abschnitte zertilt wird. Die maximale Länge dieser Abschnitte ist ein Element.
+Die rekursive Methode ist zuständig für die Halbierung des Feldes, solange unser ursprüngliches Feld in kleine Abschnitte zertilt wird. Die maximale Länge dieser Abschnitte ist ein Element.
 
 Abschließend wird die Methode `merge` aufgerufen, um die sortierten Abschnitte in eine sortierte Einheit zusammenzufügen.
 
@@ -48,7 +48,7 @@ public void sort(Person[] personen, int start, int end) {
 
 #### Laufzeit
 
-Die Laufzeit der Methode `sort` beträgt *O(n log n)*.  Wo *n* die Länge des ursprünglichen Feldes darstellt. Dabei stammt *O(n)* aus der Laufzeit der Methode `merge` und *O(log n)* aus der rekursiven Halbierung.
+Die Laufzeit der Methode `sort` beträgt *O(n log n)*.  Wobei *n* die Länge des ursprünglichen Feldes darstellt. Dabei stammt *O(n)* aus der Laufzeit der Methode `merge` und *O(log n)* aus der rekursiven Halbierung.
 
 ##### Beispiel
 
@@ -56,7 +56,7 @@ Ein Beispiel mit einem Zahlenfeld der Länge sieben.
 
 ###### Aufteilung
 
-Es ist sichtbar, dass die Höhe des Baumes, der die Halbierungen darstellt, proportional dem Logarithmus der Anzahl der Elemente ist.
+Es ist sichtbar, dass die Höhe des Baumes, der die Halbierungen darstellt, proportional zum Logarithmus der Anzahl der Elemente ist.
 
 ```
             [6][2][4][1][5][7][3]
@@ -70,7 +70,7 @@ Es ist sichtbar, dass die Höhe des Baumes, der die Halbierungen darstellt, prop
 
 ###### Zusammenfügen
 
-Bei den Aufrufen der Methode `merge` wird ein Spiegelbild der Aufteilung ersichtlich. Das ist auch proportional zum Logarithmus.
+Bei den Aufrufen der Methode `merge` wird ein Spiegelbild der Aufteilung ersichtlich. Dies ist ebenfalls proportional zum Logarithmus.
 
 ```
          [2]      [4]   [1]      [5]      [7]      [3]
@@ -86,7 +86,7 @@ Bei den Aufrufen der Methode `merge` wird ein Spiegelbild der Aufteilung ersicht
 
 Die Merge-Methode ist in `merge` implementiert. Diese Methode fügt die Elemente zweier Felder `pers1` und `pers2` zusammen.
 
-Zu diesem Zweck wird kein neues Feld erstellt, sondern wird das ursprüngliche Feld `result`ab dem Startpunkt `start` mit den zusammengefügten bzw. sortierten Personenobjekten aufgefüllt. Der richtige Startpunkt wird in der Methode `sort` berechnet.
+Zu diesem Zweck wird kein neues Feld erstellt, sondern es wird das ursprüngliche Feld `result`ab dem Startpunkt `start` mit den zusammengefügten bzw. sortierten Personenobjekten aufgefüllt. Der richtige Startpunkt wird in der Methode `sort` berechnet.
 
 Am Ende ist ein sortierter Abschnitt vorhanden, der im `start` anfängt. Seine Länge gleicht der Summe der Längen der beiden Felder `pers1` und `pers2`.
 
@@ -120,7 +120,7 @@ public void merge(Person[] pers1, Person[] pers2, Person[] result, int start) {
 
 #### Laufzeit
 
-Die Laufzeit der Methode `merge` beträgt *O(n)*.  Wo *n* die Länge des sortierten Abschnittes darstellt.
+Die Laufzeit der Methode `merge` beträgt *O(n)*.  Wobei *n* die Länge des sortierten Abschnittes darstellt.
 
 #### Beispiel
 
