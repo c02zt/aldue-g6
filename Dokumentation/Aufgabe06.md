@@ -12,7 +12,7 @@ Im Package A06_Tiefensuche finden Sie die notwendigen Basisklassen, um eine Tief
 ### In-Order-Tiefensuche
 
 Die Methode `getNodesInOrder` implementiert eine Tiefensuche in der Reihenfolge
-(linkes Kind, Knoten, rechtes Kind), die eine Liste der Titeln der im Baum gespeicherten Filme ausgibt.
+(linkes Kind, Knoten, rechtes Kind), die eine Liste der Titel, welche im Baum gespeicherte Filme ausgibt.
 
 ```java
 public List<String> getNodesInOrder(Node<Film> node) {
@@ -33,7 +33,7 @@ public List<String> getNodesInOrder(Node<Film> node) {
 ### Pre-Order-Tiefensuche
 
 Die Methode `getNodesPreOrder` implementiert eine Tiefensuche in der Reihenfolge
-(Knoten, linkes Kind, rechtes Kind), die eine Liste der Titeln der im Baum gespeicherten Filme ausgibt. Es gibt dazu noch die Einschränkung, dass nur die Filme ausgegeben werden, die eine Länge zwischen den Werten `min` und `max` haben.
+(Knoten, linkes Kind, rechtes Kind) die eine Liste der Titel, der im Baum gespeicherten Filme, ausgibt. Außerdem gibt es noch die Einschränkung, dass nur jene Filme ausgegeben werden können, welche eine Länge zwischen den Werten `min` und `max` haben.
 
 Die rekursive Methode `getNodesPreOrder` wird mithilfe von `getMinMaxPreOrder` auf dem Wurzelknoten `root` aufgerufen.
 
@@ -65,4 +65,4 @@ public List<String> getNodesPreOrder(Node<Film> node, double min, double max) {
 
 ### Laufzeit
 
-Bei den beiden Tiefensuchen ist der Algorithmus gleich, nur die Reihenfolge des Speichern der Knoten in die Liste der Resultate ist anders. Beide haben deswegen die selbe Laufzeit von *O(n)*, wo *n* der Anzahl der Knoten entspricht. Bei `getNodesPreOrder` gibt es zusätzlich zwei Vergleiche, die aber keinen wesentlichen Einfluss auf die Laufzeit haben, weil sie in einer konstanten Laufzeit (*O(1)*) erfolgen.
+Bei den beiden Tiefensuchen ist der Algorithmus gleich, lediglich die Reihenfolge des Speicherns der Knoten in die Liste der Resultate ist verschieden. Deswegen haben beide Algorithmen die selbe Laufzeit von *O(n)*, wobei *n* der Anzahl der Knoten entspricht. Bei `getNodesPreOrder` gibt es zusätzlich zwei Vergleiche, die aber keinen wesentlichen Einfluss auf die Laufzeit haben, da sie mit einer konstanten Laufzeit (*O(1)*) erfolgen.
